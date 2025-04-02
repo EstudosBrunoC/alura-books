@@ -39,14 +39,18 @@ const Resultado = styled.div`
     }
 `;
 
-function Search () {
-    const [livrosPesquisados, setlivrosPesquisados] = useState([]);
-    const [livros, setLivros] = useState([]);
+function Search() {
+    const [livrosPesquisados, setlivrosPesquisados] = useState([])
+    const [livros, setLivros] = useState([])
 
     useEffect(() => {
-        const livrosDaAPI = getLivros()
-        setLivros(livrosDaAPI)
+        fetchLivros()
     }, [])
+
+    async function fetchLivros() {
+        const livrosDaAPI = await getLivros()
+        setLivros(livrosDaAPI)
+    }
 
     return (
         <SearchContainer>
