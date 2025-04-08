@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Titulo } from "../Titulo";
+import styled from "styled-components"
+import { Titulo } from "../Titulo"
 
 const Card = styled.div`
     align-items: center;
@@ -24,6 +24,7 @@ const Botao = styled.button`
     display: block;
     text-align: center;
     width: 150px;
+
     &:hover {
         cursor: pointer;
     }
@@ -44,20 +45,20 @@ const ImgLivro = styled.img`
     width: 150px;
 `
 
-function CardRecomenda ({titulo, subtitulo, descricao, img}) {
+function CardRecomenda({titulo, subtitulo, descricao, img}) {
     return (
         <Card>
             <div>
-                <Titulo tamanhoFonte="26px" cor="#EB9B00" alinhamento="left">{titulo}</Titulo>
+                <Titulo tamanhoFonte="16px" cor="#EB9B00" alinhamento="left">{titulo}</Titulo>
                 <Subtitulo>{subtitulo}</Subtitulo>
                 <Descricao>{descricao}</Descricao>
             </div>
             <div>
                 <ImgLivro src={img}/>
-                <Botao>Saiba Mais</Botao>
+                <Botao>Saiba mais</Botao>
             </div>
-        </Card> 
+        </Card>  
     )
 }
 
-export default CardRecomenda;
+export default CardRecomenda

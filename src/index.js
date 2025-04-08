@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './rotas/Home.js';
+import Home from './rotas/Home';
 import reportWebVitals from './reportWebVitals';
-import { createGlobalStyle } from 'styled-components';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from './components/Header/index.js'; 
-import Favoritos from './rotas/Favoritos.js';
+import { createGlobalStyle } from 'styled-components'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Header from './componentes/Header'
+import Favoritos from './rotas/Favoritos';
 
 const GlobalStyle = createGlobalStyle`
   body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   code {
@@ -23,9 +23,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   li {
-    list-style: none;
+    list-style: none;    
   }
-`;
+
+
+`
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,8 +36,8 @@ root.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/favoritos" element={<Favoritos/>}> </Route>
-        <Route path="/" element={<Home />}> </Route>
+        <Route path="/favoritos" element={<Favoritos/>} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
